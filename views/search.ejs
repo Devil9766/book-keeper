@@ -1,0 +1,26 @@
+<%- include("partials/header.ejs") %>
+
+
+<main class="search-container">
+    <h1>searched results: </h1>
+    
+    <form class="search-grid-container" action = /add method="post">
+        <div class="search-links">
+            <% data.forEach(book => { %>
+                <div>
+                    <img class="coverImage" src="<%= book.cover_i ? image + book.cover_i + "-M.jpg"  : "https://www.shutterstock.com/image-vector/abstract-black-background-plurality-squares-260nw-220299187.jpg" %>" alt="image cover">
+                    <p><%= book.title %></p>
+                    <button class="addButton" type="submit" name="addCover" value="<%= book.cover_i %>" >Add</button>
+                </div>
+            <%}) %>
+        </div>
+    </form>
+    <div class="page-no-edit">
+        <a href="/previous">previous</a> <p>page no:- <%= page %> </p> <a href="/next">next</a>
+    </div>
+
+
+
+</main>
+
+<%-include("partials/footer.ejs") %>

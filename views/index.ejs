@@ -1,0 +1,54 @@
+<%- include("partials/header.ejs") %>
+
+
+
+
+<main class="book-container">
+    <div class="upper">
+        <h1>Welcome to Book Keeper</h1>
+        <p>Here you can keep small notes of your most-liked books.</p>
+    </div>
+    <% if(locals.data){%> 
+        <% data.forEach( book => {%>
+            <div class="book-note-box">
+                <div class="bookInfo">
+                    <img class="coverImage" src="<%= book.cover_id ? image + book.cover_id + "-M.jpg" : "https://www.shutterstock.com/image-vector/abstract-black-background-plurality-squares-260nw-220299187.jpg"%>" alt="image cover" >
+                    <div class="info">
+                        <p>Cover id = <%= book.cover_id %></p>
+                        <p class="note1">Note : <%= book.note %></p>
+                        <p>Rating : <%= book.rating %></p>
+                        <p>Date : <%= book.dateandday %></p>
+                        <p>Time : <%= book.time %></p>
+                    </div>
+                </div>
+                <div >
+                    <form class="options" method="post">
+                        <button class="btn-submit" formaction="/edit" name="coverID" value="<%= book.cover_id %>">Edit</button><button class="btn-submit" formaction="/delete" name="delete" value="<%= book.cover_id %>">Delete</button>
+                    </form>
+                </div>
+                
+            </div>
+        <%})%>
+    <%}else {%>
+        <h2>You haven't added any notes yet , start searching for books and keep notes to your hearts content...</h2>
+        
+        <%} %>
+    
+
+</main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<%-include("partials/footer.ejs") %>
