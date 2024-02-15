@@ -10,8 +10,11 @@
 body{
     background: linear-gradient(#e66465, #9198e5);
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
     min-height: 100vh;
+    font-size: larger;
+    
+    
     
     
 }
@@ -30,12 +33,13 @@ body{
 #app > header {
     grid-area: header;
     display: flex;
+    width:60%;
     gap: 20px;
     justify-content: space-around;
     margin: 10px auto;
     background-color: #FFF6E9;
     padding: 20px;
-    width: 60%;
+    
     font-family: 'Protest Guerrilla', sans-serif;
     
     
@@ -266,17 +270,16 @@ background-color: #003366;
     display: flex;
     flex-direction: column;
     gap: 10px;
-    white-space: inherit;
+    
     
 }
 
-.info p{
-    max-width: 600px;
-}
+
 
 .note1{
     word-wrap:break-word;
     white-space: pre-line;
+    max-width: 600px;
     overflow-y: auto;
 }
 
@@ -299,5 +302,89 @@ background-color: #003366;
     align-items: center;
 }
 
+@media screen and (max-width: 1400px) {
+    body{
+        font-size: large;
+    }
+    .bookInfo{
+        flex-direction: column;
+    }
+    .bookInfo img {
+        height: 300px;
+        width: fit-content;
+        
+    }
+    .box {
+        display: flex;
+        flex-direction: column;
+    }
+    .box img {
+        height: 300px;
+        width: fit-content;
+        
+    }
+    .notebox{
+       width: 90% ;
+    }
+    .notes{
+        width: 100%;
+    }
+    .btn-submit{
+        text-align: center;
+    }
+    .search-links{
+        grid-template-columns: repeat(3 , 30%);
+        grid-template-rows: auto;
+    }
+
+}
 
 
+@media screen and (max-width: 1000px) {
+    #app{
+        font-size: medium;
+    }
+
+    #navigation {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .bookInfo img {
+        height: fit-content;
+    }
+    .search-links{
+        grid-template-columns: repeat(2 , 40%);
+        grid-template-rows: auto;
+    }
+
+
+    
+  }
+
+  @media screen and (max-width: 700px) {
+    #app{
+        font-size: small;
+        
+        
+    }
+    body{
+        width: auto;
+        background-repeat: repeat;
+    background-size: cover;
+    }
+    
+    
+
+    .bookInfo img {
+        height: fit-content;
+    }
+    .search-links{
+        grid-template-columns: repeat(1 , 80%);
+        grid-template-rows: auto;
+    }
+
+
+    
+  }

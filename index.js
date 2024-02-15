@@ -15,15 +15,15 @@ const db = new pg.Client({
 });
 
 
-const connectionString = "postgres://devil:H8bNa070MJ5QGE2OeCZxNcJyzdMQMOsK@dpg-cn65mhed3nmc739glb3g-a/booknotes";//you can create your postgreSQL server on render.com or Vercel and then they'll give u external URL copy that and paste it here
+// const connectionString = "postgres://devil:H8bNa070MJ5QGE2OeCZxNcJyzdMQMOsK@dpg-cn65mhed3nmc739glb3g-a/booknotes";//you can create your postgreSQL server on render.com or Vercel and then they'll give u external URL copy that and paste it here
  
-const onlineDatabaseLink = new pg.Connection({
-  connectionString: connectionString,
-  // If you're using a service like Heroku, you might need this for SSL:
-  ssl: {
-    rejectUnauthorized: false,
-  },
-});
+// const onlineDatabaseLink = new pg.Connection({
+//   connectionString: connectionString,
+//   // If you're using a service like Heroku, you might need this for SSL:
+//   ssl: {
+//     rejectUnauthorized: false,
+//   },
+// });
 
 db.connect();
 
