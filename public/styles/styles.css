@@ -380,10 +380,10 @@ background-color: #003366;
     .bookInfo img {
         height: fit-content;
     }
-    .search-links{
-        grid-template-columns: repeat(1 , 80%);
+    /* .search-links{
+        grid-template-columns: repeat(2 , 40%);
         grid-template-rows: auto;
-    }
+    } */
 
 
     
