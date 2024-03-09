@@ -13,22 +13,18 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <title>Book keeper</title>
 </head>
-<body id="app">
+<body>
 
-    <header id="navigation">
-        <div class="site-name">
-            <a class="siteName" href="/notes">Book Keeper</a>
-        </div>
+  <div class="jumbotron centered">
+    <div class="container">
+      <i class="fas fa-key fa-6x"></i>
+      <h1 class="display-3">Book Keeper</h1>
+      <p class="lead">Keep your notes anonymous!</p>
+      <hr>
+      <a class="btn btn-light btn-lg" href="/register" role="button">Register</a>
+      <a class="btn btn-dark btn-lg" href="/login" role="button">Login</a>
 
-        <div class="searchBar">
-            <form id="searchBox" action="/search" method="post">
-                <button id="add" onclick="handler()">Add</button>
-                <input autocomplete="off" id="hidden" type="text" name="bookName" required hidden="true" placeholder="type book name....."><button id="hid" hidden="true" class="mag" type="submit" ><img class="seacrhPan" src="/assets/search-icon.svg" alt="search pan"></button>
-                <a href="/logout">Logout</a>
-            </form>              
+    </div>
+  </div>
+</body>
 
-        </div>
-
-        
-    </header>
-    

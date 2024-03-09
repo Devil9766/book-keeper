@@ -4,7 +4,7 @@
     <% if (locals.data) {%>
         <h1>edit data....</h1>
         <form class="box"  action="/update" method="post">
-          <img src="<%= coverId ? image + coverId + "-M.jpg" : "https://www.shutterstock.com/image-vector/abstract-black-background-plurality-squares-260nw-220299187.jpg" %>" alt="">
+          <img src="<%= coverId ? image + coverId + "-M.jpg" : "https://www.shutterstock.com/image-vector/abstract-black-background-plurality-squares-260nw-220299187.jpg" %>" alt="book-cover">
           <div class="notebox">
             <label>Notes:</label>
             <input  type="hidden" name="coverid" value="<%=coverId%>">
@@ -20,7 +20,7 @@
       <h1>add data....</h1>
       <form class="box" action="/addNewBookInfo" method="post">
       
-        <img src="<%= coverId ? image + coverId + "-M.jpg" : "https://www.shutterstock.com/image-vector/abstract-black-background-plurality-squares-260nw-220299187.jpg" %>" alt="">
+        <img src="<%= coverId ? image + coverId + "-M.jpg" : "https://www.shutterstock.com/image-vector/abstract-black-background-plurality-squares-260nw-220299187.jpg" %>" alt="book-cover">
         <div class="notebox">
           <label>Notes:</label>
           <input type="hidden" name="coverid" value="<%=coverId%>">

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,22 +14,44 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <title>Book keeper</title>
 </head>
-<body id="app">
+<body>
+  <div class="container mt-5">
+    <h1>Login</h1>
 
-    <header id="navigation">
-        <div class="site-name">
-            <a class="siteName" href="/notes">Book Keeper</a>
+    <div class="row">
+      <div class="col-sm-8">
+        <div class="card">
+          <div class="card-body">
+
+            <!-- Makes POST request to /login route -->
+            <form action="/login" method="POST">
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" class="form-control" name="username">
+              </div>
+              <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" class="form-control" name="password">
+              </div>
+              <button type="submit" class="btn btn-dark">Login</button>
+            </form>
+
+          </div>
         </div>
+      </div>
 
-        <div class="searchBar">
-            <form id="searchBox" action="/search" method="post">
-                <button id="add" onclick="handler()">Add</button>
-                <input autocomplete="off" id="hidden" type="text" name="bookName" required hidden="true" placeholder="type book name....."><button id="hid" hidden="true" class="mag" type="submit" ><img class="seacrhPan" src="/assets/search-icon.svg" alt="search pan"></button>
-                <a href="/logout">Logout</a>
-            </form>              
-
+      <div class="col-sm-4">
+        <div class="card">
+          <div class="card-body">
+            <a class="btn btn-block" href="/auth/google" role="button">
+              <i class="fab fa-google"></i>
+              Sign In with Google
+            </a>
+          </div>
         </div>
+      </div>
 
-        
-    </header>
-    
+    </div>
+  </div>
+
+</body>
